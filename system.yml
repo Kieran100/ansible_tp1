@@ -1,0 +1,11 @@
+---
+- hosts: production.monprojet.com
+  become: true 
+
+  tasks:
+  - name: create user esiee
+    ansible.builtin.user:
+    name: esiee
+    comment: User Esiee
+    group: sudoers
+    append: yes
